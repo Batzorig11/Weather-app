@@ -109,7 +109,7 @@ const main = async () => {
     const iconHTML = createWeatherIcon(iconClass);
 
     results.innerHTML = `
-      <div style="margin: 2em 0; display: flex; justify-content: center;">
+      <div style="margin: 2em 0; display: flex; justify-content: center; color: #161616;">
         ${iconHTML}
       </div>
       <h2 style="margin: 0.5em 0;">${data.name}, ${data.sys.country}</h2>
