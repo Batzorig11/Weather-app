@@ -109,12 +109,13 @@ const main = async () => {
     const iconHTML = createWeatherIcon(iconClass);
 
     results.innerHTML = `
-      <div style="margin: 2em 0;">
+      <div style="margin: 2em 0; display: flex; justify-content: center;">
         ${iconHTML}
       </div>
       <h2 style="margin: 0.5em 0;">${data.name}, ${data.sys.country}</h2>
       <p style="font-size: 3em; margin: 0.25em 0; font-weight: 100;">${Math.round(data.main.temp)}°C</p>
       <p style="text-transform: capitalize; font-size: 1.25em; margin: 0.5em 0;">${data.weather[0].description}</p>
+      <p style="font-size: 1.1em; margin: 0.75em 0;">H: ${Math.round(data.main.temp_max)}° L: ${Math.round(data.main.temp_min)}°</p>
       <div style="display: flex; gap: 2em; justify-content: center; margin-top: 1.5em; flex-wrap: wrap;">
         <p style="margin: 0;">Feels like: ${Math.round(data.main.feels_like)}°C</p>
         <p style="margin: 0;">Humidity: ${data.main.humidity}%</p>
